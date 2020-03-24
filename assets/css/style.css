@@ -1,0 +1,44 @@
+.text-arkon {
+    color: #ffc107 !important;
+}
+
+.btn-arkon {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-arkon:hover {
+    background-color: #82ad36;
+}
+
+
+/* #header img {
+    width: 200px;
+} */
+
+#home .carousel-inner img {
+    max-height: 90vh;
+    object-fit: cover;
+    /* filter: grayscale(70%); */
+}
+
+#carousel {
+    position: relative;
+}
+
+#home .overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#home .overlay .container,
+#home .overlay .row {
+    height: 100%;
+}
+
