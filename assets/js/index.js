@@ -19,11 +19,9 @@ $(function () {
         div.style.backgroundImage = `url(assets/images/${image}.jpg)`;
         div.classList.add('swiper-slide');
         div.style.backgroundPosition = '0 0';
-        console.log(div);
         swiper_wrapper.append(div);
     }
 
-    console.log(images);
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         centeredSlides: true,
