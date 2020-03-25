@@ -13,8 +13,6 @@ $(function () {
         images.push(`Imagen${i}`);
     }
 
-
-
     for (const image of images)
     {
         const div = document.createElement('div');
