@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="84">
@@ -352,96 +354,17 @@
 
     </section>
 
-    <section id="contact">
-        <div class="container text-white">
-            <h2 class="display-4">Contáctenos</h2>
-            <div class="row aling-items-center justify-content-between">
-
-                <div class="col-12 col-md-6 col-lg-7 text-dark">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="#">
-                                <div class="form-row py-2">
-                                    <div class="col-3">
-                                        <select class="custom-select">
-                                            <option selected>Tipo </option>
-                                            <option value="">Natural</option>
-                                            <option value="">Juridica</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col">
-                                        <input type="text" class="form-control" value="Nombre Institución o Persona"
-                                            onfocus="this.value = '';"
-                                            onblur="if (this.value == '') {this.value = 'Nombre Institución o Persona';}"
-                                            required>
-                                    </div>
-                                </div>
-
-                                <div class="form-row py-2">
-                                    <div class="col-7">
-                                        <input type="email" class="form-control" value="Email"
-                                            onfocus="this.value = '';"
-                                            onblur="if (this.value == '') {this.value = 'Email';}" required>
-                                    </div>
-                                    <div class="col">
-                                        <input type="tel" class="form-control" value="Tel de Contacto"
-                                            onfocus="this.value = '';"
-                                            onblur="if (this.value == '') {this.value = 'Tel de contacto';}">
-                                    </div>
-                                </div>
-
-                                <div class="py-3">
-                                    <textarea value="Comentarios:" onfocus="this.value = '';"
-                                        onblur="if (this.value == '') {this.value = 'Comentarios';}"
-                                        class="form-control" rows="5" required>Comentarios...</textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" value="agree"
-                                            name="agree-terms" id="check-agree">
-                                        <label class="custom-control-label" for="check-agree">
-                                            I agree to the Terms & Conditions
-                                        </label>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Enviar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-5 my-auto">
-                    <div class="card bg-transparent">
-                        <div class="card-body">
-                            <h4 class="card-title lead">INFORMACIÓN</h4>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent">
-                                    <p class="card-text"><span class="p-2 text-muted"><i
-                                                class="fas fa-map-marker-alt"></i></span>Cl 128. Bogotá, Colombia</p>
-                                </li>
-                                <li class="list-group-item bg-transparent">
-                                    <p class="card-text"><span class="p-2 text-muted"><i
-                                                class="fas fa-phone-alt"></i></span>+57 311 XXXX</p>
-                                </li>
-                                <li class="list-group-item bg-transparent">
-                                    <a href="mailto:hv.gtecnico.arkon@gmail.com" class="card-link "><span
-                                            class="p-2 text-muted"><i
-                                                class="fas fa-envelope"></i></span>hv.gtecnico.arkon@gmail.com</a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer id="footer" class="pb-4">
         <div class="container">
             <div class="row">
-                <div class="col my-auto">
+                <div class="col">
                     <p><span class="text-arkon">ARK</span>ON Arquitectura Integral</p>
+                    <p class="card-text"><i class="fas fa-map-marker-alt"></i>Cl
+                        128. Bogotá, Colombia</p>
+                    <p class="card-text"><i class="fas fa-phone-alt"></i>+57 311
+                        XXXX</p>
+                    <a href="mailto:hv.gtecnico.arkon@gmail.com" class="card-link "><i
+                            class="fas fa-envelope"></i>hv.gtecnico.arkon@gmail.com</a>
                 </div>
                 <div class="col text-center my-auto">
                     <h4>Follow Us</h4>
@@ -468,6 +391,79 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Contáctenos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" value="Nombre Institución o Persona"
+                                        onfocus="this.value = '';"
+                                        onblur="if (this.value == '') {this.value = 'Nombre Institución o Persona';}"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="email" class="form-control" value="Email" onfocus="this.value = '';"
+                                        onblur="if (this.value == '') {this.value = 'Email';}" required>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+                                    </div>
+                                    <input type="tel" class="form-control" value="Tel de Contacto"
+                                        onfocus="this.value = '';"
+                                        onblur="if (this.value == '') {this.value = 'Tel de contacto';}">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <textarea value="Comentarios:" onfocus="this.value = '';"
+                                    onblur="if (this.value == '') {this.value = 'Comentarios';}" class="form-control"
+                                    rows="5" required>Comentarios...</textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" value="agree" name="agree-terms"
+                                    id="check-agree">
+                                <label class="custom-control-label" for="check-agree">
+                                    I agree to the Terms & Conditions
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="sendButton" class="btn btn-arkon btn-block">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
