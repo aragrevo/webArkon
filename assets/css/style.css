@@ -104,6 +104,10 @@ footer {
 
   /* footer social icons */
 
+  footer ul {
+    list-style: none;
+  }
+
   ul.social-network {
     list-style: none;
     display: inline;
