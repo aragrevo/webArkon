@@ -12,9 +12,11 @@
 }
 
 
-/* #header img {
-    width: 200px;
-} */
+html,body{
+  margin:0px;
+  position: relative;
+  height:100%;
+}
 
 #home .carousel-inner img {
     max-height: 90vh;
@@ -55,12 +57,19 @@
 	border-bottom: none !important;
 }
 
-#gallery .carousel-inner img {
-    max-height: 75vh;
-    object-fit: cover;
+#gallery {
+  height: 80vh;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
 
 #about img {
     max-width: 100%;
