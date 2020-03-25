@@ -41,7 +41,6 @@
     height: 100%;
 }
 
-
 .icon-circle {
 	background: #4582EC;
 	display: inline-block;
@@ -56,12 +55,27 @@
 	border-bottom: none !important;
 }
 
+#gallery .carousel-inner img {
+    max-height: 75vh;
+    object-fit: cover;
+}
+
+
+
+#about img {
+    max-width: 100%;
+}
+
+#contact {
+    background-color: #343a40;
+    color: white;
+}
+
 footer {
     background: #16222A;
     background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
     background: linear-gradient(59deg, #3A6073, #16222A);
     color: white;
-    margin-top:100px;
   }
   
   footer a {
