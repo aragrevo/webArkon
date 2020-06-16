@@ -1,5 +1,9 @@
-// https://sweetalert.js.org/guides/
+// https://www.hoclabs.com/2018/03/17/emailjs-envio-de-correos-desde-javascript/
+// https://mailtrap.io/register/signup?ref=pricing_table_detailed
+// https://blog.mailtrap.io/javascript-send-email/#mailto_for_sending_form_data
 
+
+// https://sweetalert.js.org/guides/
 // https://swiperjs.com/demos/
 
 $(function () {
