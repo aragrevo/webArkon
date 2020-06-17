@@ -7,45 +7,88 @@
     { id: "about", name: "Nosotros", url: "#about" },
     { id: "contact", name: "Contáctanos", url: "#contact" }
   ];
+  // https://www.behance.net/gallery/97732711/Norm-Architects-web-brand?tracking_source=curated_galleries_list
 </script>
+
+<style type="text/scss">
+  @import "../scss/base.scss";
+
+  .Nav {
+    $self: &;
+
+    left: 0;
+    padding: 16px 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    a {
+      color: $color-black;
+      text-decoration: none;
+    }
+
+    &--light a {
+      color: $color-white;
+    }
+
+    &-wrapper {
+      @include for-size(l) {
+        display: none;
+      }
+    }
+
+    &-list {
+      display: none;
+      grid-column: 1/-1;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+
+      @include for-size(l) {
+        display: flex;
+      }
+    }
+
+    &-item {
+      font-family: $font-primary;
+      font-size: $font-size-small;
+      font-weight: 300;
+      line-height: 2;
+      margin-right: $padding-small;
+      transition: transform 0.4s ease-in-out;
+
+      &:active,
+      &:focus,
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      &:first-child {
+        border-bottom: 3px solid $color-primary;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+</style>
 
 <header class="Header">
   <nav class="Nav">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-log">{name}</a>
-      <ul class="right hide-on-med-and-down">
+    <div class="grid">
+      <div class="Nav-wrapper">
+        <a href="/" class="brand-log">{name}</a>
+      </div>
+      <ul class="Nav-list">
         {#each menu as item}
-          <li class="active">
+          <li class="Nav-item">
             <a href={item.url}>{item.name}</a>
           </li>
         {/each}
       </ul>
     </div>
   </nav>
-  <div class="mdc-tab-bar" role="tablist">
-    <div class="mdc-tab-scroller">
-      <div class="mdc-tab-scroller__scroll-area">
-        <div class="mdc-tab-scroller__scroll-content">
-          <button
-            class="mdc-tab mdc-tab--active"
-            role="tab"
-            aria-selected="true"
-            tabindex="0">
-            <span class="mdc-tab__content">
-              <span class="mdc-tab__icon material-icons" aria-hidden="true">
-                favorite
-              </span>
-              <span class="mdc-tab__text-label">Favorites</span>
-            </span>
-            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-              <span
-                class="mdc-tab-indicator__content
-                mdc-tab-indicator__content--underline" />
-            </span>
-            <span class="mdc-tab__ripple" />
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </header>
