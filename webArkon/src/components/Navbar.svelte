@@ -1,11 +1,11 @@
 <script>
   export let name;
   const menu = [
-    { id: "home", name: "Inicio", url: "#home" },
-    { id: "services", name: "Servicios", url: "#services" },
-    { id: "gallery", name: "Galería", url: "#gallery" },
-    { id: "about", name: "Nosotros", url: "#about" },
-    { id: "contact", name: "Contáctanos", url: "#contact" }
+    { id: "home", name: "Inicio", url: "" },
+    { id: "services", name: "Servicios", url: "services" },
+    { id: "gallery", name: "Galería", url: "gallery" },
+    { id: "about", name: "Nosotros", url: "about" },
+    { id: "contact", name: "Contáctanos", url: "contact" }
   ];
   // https://www.behance.net/gallery/97732711/Norm-Architects-web-brand?tracking_source=curated_galleries_list
 </script>
@@ -33,7 +33,11 @@
     }
 
     &-wrapper {
-      @include for-size(l) {
+      i {
+        color: $color-primary;
+        font-size: $font-size-large;
+      }
+      @include for-size(m) {
         display: none;
       }
     }
@@ -45,7 +49,7 @@
       list-style: none;
       padding: 0;
 
-      @include for-size(l) {
+      @include for-size(m) {
         display: flex;
       }
     }
@@ -79,7 +83,9 @@
   <nav class="Nav">
     <div class="grid">
       <div class="Nav-wrapper">
-        <a href="/" class="brand-log">{name}</a>
+        <a href="/" class="brand-log">
+          <i class="material-icons">menu</i>
+        </a>
       </div>
       <ul class="Nav-list">
         {#each menu as item}

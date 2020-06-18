@@ -5,19 +5,15 @@
   // https://material.io/develop/web/docs/getting-started/
 </script>
 
-<style>
-  @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
-  :global(body) {
-    padding: 0;
-    margin: 0;
-    font-family: "Quicksand", sans-serif;
-    box-sizing: border-box;
-    font-size: 62.5%;
-    font-size: 10px;
-  }
+<style type="text/scss">
+  @import "./scss/base.scss";
 </style>
 
 <main>
-  <Navbar {name} />
-  <Home />
+  <Navbar />
+  <Home id="home" {name} />
+  <!-- <Quote /> -->
+  <!-- <Menu /> module-->
+  <!-- <Challenge /> -->
+  <!-- <Contact /> module-->
 </main>
