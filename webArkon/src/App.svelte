@@ -1,7 +1,10 @@
 <script>
   import Navbar from "./components/Navbar.svelte";
-  import Home from "./components/Home.svelte";
+  import Sidebar from "./components/Sidebar.svelte";
+  import Home from "./pages/Home.svelte";
+  import Contact from "./pages/Contact.svelte";
   export let name;
+  export let routes;
   // https://material.io/develop/web/docs/getting-started/
 </script>
 
@@ -10,10 +13,13 @@
 </style>
 
 <main>
-  <Navbar />
-  <Home id="home" {name} />
+  <Navbar {routes} />
+
+  <Home {name} />
+  <Sidebar {routes} />
   <!-- <Quote /> -->
   <!-- <Menu /> module-->
   <!-- <Challenge /> -->
-  <!-- <Contact /> module-->
+  <Contact />
+  <div data-router />
 </main>

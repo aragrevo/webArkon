@@ -1,12 +1,6 @@
 <script>
-  export let name;
-  const menu = [
-    { id: "home", name: "Inicio", url: "" },
-    { id: "services", name: "Servicios", url: "services" },
-    { id: "gallery", name: "Galería", url: "gallery" },
-    { id: "about", name: "Nosotros", url: "about" },
-    { id: "contact", name: "Contáctanos", url: "contact" }
-  ];
+  export let routes = [];
+  console.log(routes);
   // https://www.behance.net/gallery/97732711/Norm-Architects-web-brand?tracking_source=curated_galleries_list
 </script>
 
@@ -74,6 +68,10 @@
 
       &:last-child {
         margin-right: 0;
+
+        a {
+          color: $color-primary;
+        }
       }
     }
   }
@@ -88,9 +86,9 @@
         </a>
       </div>
       <ul class="Nav-list">
-        {#each menu as item}
+        {#each routes as route}
           <li class="Nav-item">
-            <a href={item.url}>{item.name}</a>
+            <a href={route.path}>{route.name}</a>
           </li>
         {/each}
       </ul>

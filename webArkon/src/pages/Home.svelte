@@ -31,7 +31,7 @@
       z-index: 1;
     }
 
-    &-title,
+    // &-title,
     &-subtitle {
       margin-bottom: $padding-small;
     }
@@ -44,21 +44,23 @@
       z-index: 2;
     }
 
-    &-icon {
+    // &-icon {
+    &-title {
       margin: $padding-large 0 $padding-small;
     }
   }
 </style>
 
 <section class="Home">
-  <div class="Home-icon">
-    <i class="material-icons">home</i>
-    <!-- <Icon /> -->
-  </div>
+  <!-- <div class="Home-icon"> -->
+  <!-- <img src="assets/images/logo2.png" alt="" /> -->
+  <!-- <i class="material-icons">home</i> -->
+  <!-- <Icon /> -->
+  <!-- </div> -->
   <h1 class="Home-title">{names[0]}</h1>
   <h2 class="Home-subtitle">{names[1] + ' ' + names[2]}</h2>
-  <div class="Home-cta">
-    <!-- <Cta /> -->
-    <button class="Home-cta" type="button">Button</button>
-  </div>
+  <!-- <div class="Home-cta"> -->
+  <!-- <Cta /> -->
+  <!-- <button class="Home-cta" type="button">Button</button> -->
+  <!-- </div> -->
 </section>
